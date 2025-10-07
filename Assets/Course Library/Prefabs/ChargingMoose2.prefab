@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 2130378232614202761}
   - component: {fileID: 4730141408407939198}
   - component: {fileID: 2950197359075760556}
+  - component: {fileID: 6744977067859351348}
   m_Layer: 0
   m_Name: ChargingMoose2
   m_TagString: Untagged
@@ -343,6 +344,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   zBound: 120
+--- !u!65 &6744977067859351348
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2857757751020122017}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2574169, y: 0.49809408, z: 0.5168765}
+  m_Center: {x: 0.025185456, y: 0.25095373, z: 0.042690452}
 --- !u!1 &4355948264122810478
 GameObject:
   m_ObjectHideFlags: 0
