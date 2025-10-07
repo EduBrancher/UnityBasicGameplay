@@ -7,9 +7,8 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] float xBound;
     [SerializeField] GameObject projectile;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+    void Start() {
+        EventHub.AnimalCrossedBottom += AnimalCrossedBottom;
     }
 
     // Update is called once per frame
@@ -31,5 +30,9 @@ public class PlayerController : MonoBehaviour {
         if (spacebarPress) {
             var go = Instantiate(projectile, transform.position, transform.rotation);
         }
+    }
+
+    void AnimalCrossedBottom() {
+        Debug.Log("Game Over!");
     }
 }

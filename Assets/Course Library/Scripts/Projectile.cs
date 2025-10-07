@@ -1,21 +1,27 @@
 using UnityEngine;
 
-public class MoveForward : MonoBehaviour {
+public class Projectile : MonoBehaviour
+{
+    
     [SerializeField] float speed;
     [SerializeField] float zBound;
-    EventHub eventHub;
+    
 
     // Update is called once per frame
     void FixedUpdate()
     {
         transform.Translate(speed * Time.deltaTime * Vector3.forward);
-        if (transform.position.z > zBound) {
+        if (transform.position.z > zBound || 
+            transform.position.z < -zBound) {
             Destroy(gameObject);
         }
+        
+    }
 
-        if (transform.position.z < -zBound) {
-            EventHub.OnAnimalCrossedBottom();
-            Destroy(gameObject);
-        }
+    void OnTriggerEnter(Collider other) {
+        Destroy(other.gameObject);
+        Destroy(gameObject);
     }
 }
+
+
